@@ -20,13 +20,18 @@ public class Calculations {
 	
 	public static long getFactorial(int n) {
 		
-		long product = 1;
+		/*long product = 1;
 		
 		while(n != 1) {
 			product *= n;
 			n--;
 		}
 		
-		return product;
+		return product;*/
+		if(n <= 1) {
+			return 1;
+		}
+		return n * getFactorial(n - 1);
+		
 	}
 }

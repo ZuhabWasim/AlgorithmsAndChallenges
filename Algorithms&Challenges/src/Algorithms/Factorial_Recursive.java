@@ -10,6 +10,7 @@ public class Factorial_Recursive {
 		
 	}
 	
+	//This is the factorial function using recursion
 	public static long factorial(int n) {
 		
 		if(n <= 1) {
