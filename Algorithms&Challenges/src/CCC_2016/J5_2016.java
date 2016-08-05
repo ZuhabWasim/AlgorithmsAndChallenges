@@ -25,18 +25,32 @@ public class J5_2016 {
 			b[i] = sc.nextInt();
 		}
 		
+	/*	int maxA = getMax(a);
+		int maxB = getMax(b);
+		
+		int increment = 1;*/
+		
 		if(question == 1) {
 			int tempVal;
 			int index;
 			for(i = 0; i < a.length; i++) {
 				tempVal = a[i];
+				/*if(a[maxA] > b[maxB]) {
+					maxSpeed[i] = maxA;
+					a[maxA] = -1;
+					b[maxB] = -1;
+					j++;
+				}*/
 				while(true) {
 					index = getIndex(b, tempVal);
+					System.out.println(index + " " + j);
+					
 					if(index != -1) {
 						maxSpeed[j] = max(b[index], tempVal);
 						b[index] = -1;
 						break;
 					} else {
+						//tempVal += increment;
 						tempVal++;
 					}
 				}
@@ -49,6 +63,7 @@ public class J5_2016 {
 				maxValIndex = getMax(a);
 				minValIndex = getMin(b);
 				maxSpeed[i] = max(a[maxValIndex], b[minValIndex]);
+				System.out.println(maxValIndex + ": " + a[maxValIndex]  + "  " + minValIndex + ": " +  b[minValIndex]);
 				a[maxValIndex] = -1;
 				b[minValIndex] = -1;
 			}

@@ -83,43 +83,4 @@ public class Quick_Sort {
 	    
 	}
 	
-			/*var quickSort = function(array, p, r) {
-		    
-		   
-		};
-		
-		// Swaps two items in an array, changing the original array
-		var swap = function(array, firstIndex, secondIndex) {
-		    var temp = array[firstIndex];
-		    array[firstIndex] = array[secondIndex];
-		    array[secondIndex] = temp;
-		};
-		
-		var partition = function(array, p, r) {
-		    
-		    // maintaining that:
-		    //  array[p..q-1] are values known to be <= to array[r] (group L)
-		    //  array[q..j-1] are values known to be > array[r] (group G)
-		    //  array[j..r-1] haven't been compared with array[r] (group U)
-		    
-		    var q = p;
-		    
-		    // Compare array[j] with array[r], for j = p, p+1,...r-1 (for loops)
-		    // If array[j] > array[r], just increment j. (Condition1)
-		    for(var j = p; j < r; j++) {
-		        // If array[j] <= array[r], swap array[j] with array[q], (Condition2)
-		        if(array[j] <= array[r]) {
-		            //   increment q, and increment j. (j is already incremented as its a for loop)
-		            swap(array, j, q);
-		            q++;
-		        }
-		    }
-		    // Once all elements in array[p..r-1]
-		    //  have been compared with array[r],
-		    //  swap array[r] with array[q], and return q. (Final lines and return statement)
-		    swap(array, r, q);
-		    return q;
-		    
-		};
-		*/
 }
