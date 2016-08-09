@@ -3,10 +3,55 @@ package Misc;
 import java.util.Scanner;
 
 public class Test {
-
+	
+	public static void removeAdj(int array[], int target) {
+		
+		int index = 0;
+		
+		while(array[index] != target) {
+			index ++;
+		}
+		
+		for(int i = index + 1; i < array.length; i++) {
+			array[i - 1] = array[i];
+		}
+		
+		array[array.length - 1] = -1;
+		
+	}
+	
 	public static void main(String[] args) {
 
-		Scanner sc = new Scanner(System.in);
+		int a[] = {1,2,3,4,5};
+		//int b[] = a;
+		int b[] = new int [5];
+		for(int i = 0; i < 5; i++) {
+			b[i] = a[i];
+		}
+		
+		for(int i = 0; i < b.length; i++) {
+			System.out.print(b[i] + ", ");
+		}
+		System.out.println(" ");
+		removeAdj(b, 3);
+		
+		for(int i = 0; i < b.length; i++) {
+			System.out.print(b[i] + ", ");
+		}
+		System.out.println(" ");
+		
+		b = a;
+		
+		for(int i = 0; i < b.length; i++) {
+			System.out.print(b[i] + ", ");
+		}
+		System.out.println(" ");
+		/*for(int i = 0; i < a.length; i++) {
+			System.out.print(a[i] + ", ");
+		}
+		System.out.println(" ");*/
+		
+		/*Scanner sc = new Scanner(System.in);
 
 		int n = Integer.parseInt(sc.nextLine());
 		//int size = (n > 1000) ? 1001 : n + 1;
@@ -78,7 +123,7 @@ public class Test {
 			System.out.println(absDiff);
 		}
 		
-		sc.close();
+		sc.close();*/
 	}
 
 	public static void insert(int array[], int rightIndex, int value, int arrayIndex[]) {

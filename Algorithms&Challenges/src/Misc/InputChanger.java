@@ -10,8 +10,13 @@ public class InputChanger {
 		
 		String nums[] = sc.nextLine().split(" ");
 		
-		for(int i = 0; i < nums.length; i++) {
-			System.out.println(nums[i]);
+		for(int i = 0; i < nums.length; i+= 2) {
+			if(i != nums.length - 1) {
+				System.out.println(nums[i] + " " + nums[i+1]);
+			} else {
+				System.out.println(nums[i]);
+			}
+			
 		}
 		
 		sc.close();
