@@ -9,13 +9,13 @@ public class InputChanger {
 		Scanner sc = new Scanner(System.in);
 		
 		String nums[] = sc.nextLine().split(" ");
+		int c = nums.length;
 		
-		for(int i = 0; i < nums.length; i+= 2) {
-			if(i != nums.length - 1) {
-				System.out.println(nums[i] + " " + nums[i+1]);
-			} else {
-				System.out.println(nums[i]);
-			}
+		System.out.println(nums[0]);
+		
+		for(int i = 1; i < nums.length; i+= 2) {
+			
+			System.out.println(nums[i] + " " + nums[i+1]);	
 			
 		}
 		

@@ -16,26 +16,26 @@ public class Searching_BinaryVsLinear {
 		System.out.println("Input a number and the method you like to use (# binary/linear)");
 		
 		int response = sc.nextInt();
-		String response2 = sc.next();
+		//String response2 = sc.next();
 		
 		System.out.println("");
 		System.out.println("Searching for " + response + " ...");
 		
 		//System.out.println(searchUsingBinary(array, 2000));
-		if(response2.equals("binary")) {
+		//if(response2.equals("binary")) {
 			if(binarySearch(array, response)) {
 				System.out.println("Found the value " + response + " in " + numGuesses + " guesses.");
 			} else {
 				System.out.println("Sorry, the value you inputed is not in the array");
 			}
-		} else {
+		//} else {
 			if(linearSearch(array, response)) {
 				System.out.println("Found the value " + response + " in " + numGuesses + " guesses.");
 			} else {
 				System.out.println("Sorry, the value you inputed is not in the array");
 			}
-		}
-		
+		//}
+		System.out.println(searchUsingBinary(array, 2000));
 		sc.close();
 		
 	}
@@ -69,7 +69,7 @@ public class Searching_BinaryVsLinear {
 		
 		while(max > min) {
 			guess = (int) (min + max) / 2;
-			System.out.println(guess);
+			//System.out.println(guess);
 			if(nums[guess] == target) {
 				return guess;
 			} else if(nums[guess] > target) {
